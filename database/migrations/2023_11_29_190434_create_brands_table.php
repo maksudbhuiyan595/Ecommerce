@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('brands', function (Blueprint $table) {
             $table->id();
-            $table->string('name',60);
-            $table->boolean('status')->default('1');
-            $table->string('image')->nullable();
+            $table->string('brand_name',60);
+            $table->boolean('brand_status')->default('1');
+            $table->string('brand_image')->nullable();
 
             $table->foreignId('category_id')->constrained('categories')->cascadeOnDelete();
             $table->timestamps();
