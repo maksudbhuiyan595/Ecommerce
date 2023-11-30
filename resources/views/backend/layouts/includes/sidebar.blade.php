@@ -38,4 +38,11 @@
     </a>
 </li>
 
+<li class="nav-item">
+    <a class="nav-link collapsed" href="{{ route('product.list') }}" >
+        <i class="fas fa-fw fa-cog"></i>
+        <span>Products</span>
+    </a>
+</li>
+
 </ul>

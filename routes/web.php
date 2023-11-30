@@ -4,6 +4,7 @@
 use App\Http\Controllers\Backend\BrandController;
 use App\Http\Controllers\Backend\CategoryCongroller;
 use App\Http\Controllers\Backend\HomeController;
+use App\Http\Controllers\Backend\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,4 +38,14 @@ Route::controller(BrandController::class)->group(function(){
     Route::get('brands/edit/{brandId}','edit')->name('brand.edit');
     Route::get('brands/update/{brandId}','update')->name('brand.update');
     Route::get('brands/delete/{brandId}','delete')->name('brand.delee');
+});
+
+Route::controller(ProductController::class)->group(function(){
+    Route::get('products/list','list')->name('product.list');
+    Route::get('products/create','create')->name('product.create');
+    Route::post('products/store','store')->name('product.store');
+    Route::get('products/view/{productId}','view')->name('product.view');
+    Route::get('products/edit/{productId}','edit')->name('product.edit');
+    Route::put('products/update/{productId}','update')->name('product.update');
+    Route::delete('products/delete/{productId}','delete')->name('product.delete');
 });
