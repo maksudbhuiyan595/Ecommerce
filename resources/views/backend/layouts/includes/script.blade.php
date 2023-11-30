@@ -14,9 +14,11 @@
     <script src="{{ asset('ui/backend') }}/js/demo/chart-area-demo.js"></script>
     <script src="{{ asset('ui/backend') }}/js/demo/chart-pie-demo.js"></script>
 
-    
+    <!-- notify -->
     <x-notify::notify />
         @notifyJs
+
+    @stack('js')
 
 
    
