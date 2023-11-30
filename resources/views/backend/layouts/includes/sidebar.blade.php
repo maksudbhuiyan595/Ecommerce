@@ -32,7 +32,7 @@
 </li>
 
 <li class="nav-item">
-    <a class="nav-link collapsed" href="#" >
+    <a class="nav-link collapsed" href="{{route('brand.list')}}" >
         <i class="fas fa-fw fa-cog"></i>
         <span>Brands</span>
     </a>
