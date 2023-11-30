@@ -13,7 +13,7 @@
 
 <!-- Nav Item - Dashboard -->
 <li class="nav-item active">
-    <a class="nav-link" href="index.html">
+    <a class="nav-link" href="#">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Dashboard</span></a>
 </li>
@@ -25,15 +25,16 @@
 
 <!-- Nav Item - Pages Collapse Menu -->
 <li class="nav-item">
-    <a class="nav-link collapsed" href="#" >
+    <a class="nav-link collapsed" href="{{ route('category.list') }}" >
         <i class="fas fa-fw fa-cog"></i>
-        <span>Brands</span>
+        <span>Categories</span>
     </a>
 </li>
+
 <li class="nav-item">
     <a class="nav-link collapsed" href="#" >
         <i class="fas fa-fw fa-cog"></i>
-        <span>Categories</span>
+        <span>Brands</span>
     </a>
 </li>
 
