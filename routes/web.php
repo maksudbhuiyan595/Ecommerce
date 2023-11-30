@@ -1,6 +1,8 @@
 <?php
 
+
 use App\Http\Controllers\Backend\BrandController;
+use App\Http\Controllers\Backend\CategoryCongroller;
 use App\Http\Controllers\Backend\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,6 +18,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('admin/home',[HomeController::class,'home'])->name('home');
+
+Route::controller(CategoryCongroller::class)->group(function(){
+    Route::get('categories/list','list')->name('category.list');
+    Route::get('categories/create','create')->name('category.create');
+    Route::post('categories/store','store')->name('category.store');
+    Route::get('categories/view/{categoryId}','view')->name('category.view');
+    Route::get('categories/edit/{categoryId}','edit')->name('category.edit');
+    Route::put('categories/update/{categoryId}','update')->name('category.update');
+    Route::delete('categories/delete/{categoryId}','delete')->name('category.delete');
+});
 
 Route::controller(BrandController::class)->group(function(){
     Route::get('brands/list','list')->name('brand.list');

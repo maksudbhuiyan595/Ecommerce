@@ -9,6 +9,6 @@ class BrandController extends Controller
 {
     public function list()
     {
-        return veiw("")
+        
     }
 }

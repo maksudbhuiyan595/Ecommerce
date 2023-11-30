@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('password');
             
             $table->string('role');
-            $table->foreignId('role_id')->constrained('roles')->restrictOnDelete();
+            $table->string('role_id');
             
             $table->string('token');
             $table->string('token_expried_at');
