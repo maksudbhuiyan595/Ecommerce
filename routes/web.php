@@ -5,6 +5,7 @@ use App\Http\Controllers\Backend\BrandController;
 use App\Http\Controllers\Backend\CategoryCongroller;
 use App\Http\Controllers\Backend\HomeController;
 use App\Http\Controllers\Backend\ProductController;
+use App\Http\Controllers\Backend\RoleController;
 use App\Http\Controllers\WebsiteController;
 use Illuminate\Support\Facades\Route;
 
@@ -56,4 +57,16 @@ Route::controller(ProductController::class)->group(function(){
     Route::get('products/edit/{productId}','edit')->name('product.edit');
     Route::put('products/update/{productId}','update')->name('product.update');
     Route::delete('products/delete/{productId}','delete')->name('product.delete');
+});
+
+Route::controller(RoleController::class)->group(function(){
+    Route::get('roles/list','list')->name('role.list');
+    Route::get('roles/create','create')->name('role.create');
+    Route::post('roles/store','store')->name('role.store');
+    Route::get('roles/view/{roleId}','view')->name('role.view');
+    Route::get('roles/edit/{roleId}','edit')->name('role.edit');
+    Route::put('roles/update/{roleId}','update')->name('role.update');
+    Route::delete('roles/delete/{roleId}','delete')->name('role.delete');
+    Route::get('/assign-from/{roleId}','assignForm')->name('assign.form');
+    Route::get('/assign-role/{roleId}','assign')->name('assign.role');
 });
