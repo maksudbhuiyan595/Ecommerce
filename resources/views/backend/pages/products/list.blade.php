@@ -30,7 +30,7 @@
                     <tr>
                         <td>{{ ++$productId }}</td>
                         <td>
-                            <img src="{{ asset('/thumbnail/',$product->image) }}" alt="Image">
+                            <img width="60" height="60" src="{{ url('/thumbnail/',$product->image) }}" alt="Image">
                         </td>
                         <td>{{ $product->name }}</td>
                         <td>{{ $product->status ? "active": "inactive" }}</td>
