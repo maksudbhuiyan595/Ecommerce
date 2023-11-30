@@ -5,6 +5,7 @@ use App\Http\Controllers\Backend\BrandController;
 use App\Http\Controllers\Backend\CategoryCongroller;
 use App\Http\Controllers\Backend\HomeController;
 use App\Http\Controllers\Backend\ProductController;
+use App\Http\Controllers\WebsiteController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,6 +19,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//for website
+Route::get('/',[WebsiteController::class,'webhome'])->name('webhome');
+
+
+
+
+//for admin panel
 Route::get('admin/home',[HomeController::class,'home'])->name('home');
 
 Route::controller(CategoryCongroller::class)->group(function(){
