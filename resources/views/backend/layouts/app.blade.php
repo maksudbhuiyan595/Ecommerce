@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-@include('backend.components.includes.head')
+@include('backend.layouts.includes.head')
+
 
 <body id="page-top">
 
@@ -9,7 +10,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        @include('backend.components.includes.sidebar')
+        @include('backend.layouts.includes.sidebar')
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -19,14 +20,17 @@
         <div id="content">
 
         <!-- Topbar -->
-        @include('backend.components.includes.topbar')
+        @include('backend.layouts.includes.topbar')
         <!-- End of Topbar -->
 
-                jadksfjak
+            @yield('content')
+            
         <!-- End of Main Content -->
 
+        </div>
+        
         <!-- Footer -->
-        @include('backend.components.includes.footer')
+        @include('backend.layouts.includes.footer')
         <!-- End of Footer -->
 
         </div>
@@ -39,7 +43,9 @@
 
         <!-- Bootstrap core JavaScript-->
     
-        @include('backend.components.includes.script')
+        @include('backend.layouts.includes.script')
+        
+        
 
 
 </body>
