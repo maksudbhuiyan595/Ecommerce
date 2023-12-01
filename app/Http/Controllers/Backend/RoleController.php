@@ -69,6 +69,5 @@ class RoleController extends Controller
         }
         notify()->success("successfully created.");
         return redirect()->back();
-
     }
 }
