@@ -25,9 +25,9 @@ Route::get('/',[WebsiteController::class,'webhome'])->name('webhome');
 
 
 
-
+Route::group(['prefix'=>'admin'],function(){
 //for admin panel
-Route::get('admin/home',[HomeController::class,'home'])->name('home');
+Route::get('home',[HomeController::class,'home'])->name('home');
 
 Route::controller(CategoryCongroller::class)->group(function(){
     Route::get('categories/list','list')->name('category.list');
@@ -69,4 +69,5 @@ Route::controller(RoleController::class)->group(function(){
     Route::delete('roles/delete/{roleId}','delete')->name('role.delete');
     Route::get('/assign-from/{roleId}','assignForm')->name('assign.form');
     Route::get('/assign-role/{roleId}','assign')->name('assign.role');
+});
 });
