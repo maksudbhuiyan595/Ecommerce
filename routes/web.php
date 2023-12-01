@@ -25,9 +25,9 @@ Route::get('/',[WebsiteController::class,'webhome'])->name('webhome');
 
 
 
-
+Route::group(['prefix'=>'admin'],function(){
 //for admin panel
-Route::get('admin/home',[HomeController::class,'home'])->name('home');
+Route::get('home',[HomeController::class,'home'])->name('home');
 
 Route::controller(CategoryCongroller::class)->group(function(){
     Route::get('categories/list','list')->name('category.list');
@@ -47,8 +47,12 @@ Route::controller(BrandController::class)->group(function(){
     Route::get('brands/edit/{brandId}','edit')->name('brand.edit');
   Route::put('brands/update/{brandId}','update')->name('brand.update');
     Route::delete('brands/delete/{brandId}','delete')->name('brand.delete');
+<<<<<<< HEAD
 
  
+=======
+    
+>>>>>>> 031bbe788e4daa7ec61de4e2e2b515ac39d401d4
 });
 
 Route::controller(ProductController::class)->group(function(){
@@ -71,4 +75,12 @@ Route::controller(RoleController::class)->group(function(){
     Route::delete('roles/delete/{roleId}','delete')->name('role.delete');
     Route::get('/assign-from/{roleId}','assignForm')->name('assign.form');
     Route::get('/assign-role/{roleId}','assign')->name('assign.role');
+<<<<<<< HEAD
+=======
+
+    Route::post('/assign-permission/{roleId}','assignPermission')->name('assign.permission');
+
+});
+
+>>>>>>> 031bbe788e4daa7ec61de4e2e2b515ac39d401d4
 });
