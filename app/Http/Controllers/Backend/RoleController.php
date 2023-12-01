@@ -43,7 +43,7 @@ class RoleController extends Controller
     public function assignForm($id)
     {
         $role=Role::with('permissions')->find($id);
-        $rolePermissions=$role->permissions->pluck('permission_id')->toArray(); // arter convert data 
+        $rolePermissions=$role->permissions->pluck('permission_id')->toArray(); // after convert data 
         $permissions=Permission::all();
         return view("backend.pages.roles.assign",compact("role","permissions","rolePermissions"));
     }
