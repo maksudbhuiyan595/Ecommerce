@@ -49,7 +49,6 @@ class RoleController extends Controller
     }
     public function assignPermission(Request $request,$role_id)
     {
-        // dd($request->all());
         $validate=Validator::make($request->all(),[
             // "permisssion" =>"required",
         ]);
