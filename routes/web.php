@@ -71,6 +71,8 @@ Route::controller(RoleController::class)->group(function(){
     Route::get('/assign-from/{roleId}','assignForm')->name('assign.form');
     Route::get('/assign-role/{roleId}','assign')->name('assign.role');
 
+    Route::post('/assign-permission/{roleId}','assignPermission')->name('assign.permission');
+
 });
 
 });
