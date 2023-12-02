@@ -28,8 +28,10 @@ Route::get('/',[WebsiteController::class,'webhome'])->name('webhome');
 Route::group(['prefix'=>'admin'],function(){
 //for admin panel
 
+
 Route::get('login/form',[HomeController::class,'loginform'])->name('login.form');
 Route::post('login',[HomeController::class,'login'])->name('login');
+
 
 
 Route::get('home',[HomeController::class,'home'])->name('home');
@@ -52,6 +54,10 @@ Route::controller(BrandController::class)->group(function(){
     Route::get('brands/edit/{brandId}','edit')->name('brand.edit');
   Route::put('brands/update/{brandId}','update')->name('brand.update');
     Route::delete('brands/delete/{brandId}','delete')->name('brand.delete');
+
+
+
+    
 
 });
 

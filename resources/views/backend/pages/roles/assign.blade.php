@@ -8,7 +8,7 @@
     <div class="card-body">
         <div class="row">
             <div class="col-md-6">
-<<<<<<< HEAD
+
                 <div class="card">
                     <div class="card-header">
                         {{ ucfirst($role->name) }}
@@ -30,7 +30,7 @@
                         </label>
                         </div>
                     </div>
-=======
+
                 <div class="card p-3">
                     <div class="card-header">
                         {{ ucfirst($role->name) }}
@@ -63,7 +63,7 @@ permission[]
 
                         <button type="submit"  style="float:right"  class="btn btn-outline-primary mt-3">Assign Permission</button>
                     </form> 
->>>>>>> 031bbe788e4daa7ec61de4e2e2b515ac39d401d4
+
                 </div>
             </div>
         </div>
