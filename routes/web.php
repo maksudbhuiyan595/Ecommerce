@@ -47,4 +47,4 @@ Route::controller(BrandController::class)->group(function(){
     Route::get('brands/edit/{brandId}','edit')->name('brand.edit');
   Route::put('brands/update/{brandId}','update')->name('brand.update');
     Route::delete('brands/delete/{brandId}','delete')->name('brand.delete');
-}));
+});
