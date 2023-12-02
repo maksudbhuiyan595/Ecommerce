@@ -25,16 +25,9 @@ Route::get('/',[WebsiteController::class,'webhome'])->name('webhome');
 
 
 
-Route::group(['prefix'=>'admin'],function(){
+
 //for admin panel
-
-
-Route::get('login/form',[HomeController::class,'loginform'])->name('login.form');
-Route::post('login',[HomeController::class,'login'])->name('login');
-
-
-
-Route::get('home',[HomeController::class,'home'])->name('home');
+Route::get('admin/home',[HomeController::class,'home'])->name('home');
 
 Route::controller(CategoryCongroller::class)->group(function(){
     Route::get('categories/list','list')->name('category.list');
@@ -54,38 +47,4 @@ Route::controller(BrandController::class)->group(function(){
     Route::get('brands/edit/{brandId}','edit')->name('brand.edit');
   Route::put('brands/update/{brandId}','update')->name('brand.update');
     Route::delete('brands/delete/{brandId}','delete')->name('brand.delete');
-
-
-
-    
-
-});
-
-Route::controller(ProductController::class)->group(function(){
-    Route::get('products/list','list')->name('product.list');
-    Route::get('products/create','create')->name('product.create');
-    Route::post('products/store','store')->name('product.store');
-    Route::get('products/view/{productId}','view')->name('product.view');
-    Route::get('products/edit/{productId}','edit')->name('product.edit');
-    Route::put('products/update/{productId}','update')->name('product.update');
-    Route::delete('products/delete/{productId}','delete')->name('product.delete');
-});
-
-Route::controller(RoleController::class)->group(function(){
-    Route::get('roles/list','list')->name('role.list');
-    Route::get('roles/create','create')->name('role.create');
-    Route::post('roles/store','store')->name('role.store');
-    Route::get('roles/view/{roleId}','view')->name('role.view');
-    Route::get('roles/edit/{roleId}','edit')->name('role.edit');
-    Route::put('roles/update/{roleId}','update')->name('role.update');
-    Route::delete('roles/delete/{roleId}','delete')->name('role.delete');
-    Route::get('/assign-from/{roleId}','assignForm')->name('assign.form');
-    Route::get('/assign-role/{roleId}','assign')->name('assign.role');
-
-
-    Route::post('/assign-permission/{roleId}','assignPermission')->name('assign.permission');
-
-});
-
-
-});
+}));

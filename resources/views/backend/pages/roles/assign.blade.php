@@ -8,29 +8,6 @@
     <div class="card-body">
         <div class="row">
             <div class="col-md-6">
-
-                <div class="card">
-                    <div class="card-header">
-                        {{ ucfirst($role->name) }}
-                    </div>
-                    <div class="card-body">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
-                               All Permission 
-                            </label>
-                            </div>
-                    </div>
-                    <div class="card-footer">
-                        
-                        <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                        <label class="form-check-label" for="flexCheckChecked">
-                            Checked checkbox
-                        </label>
-                        </div>
-                    </div>
-
                 <div class="card p-3">
                     <div class="card-header">
                         {{ ucfirst($role->name) }}
@@ -63,7 +40,6 @@ permission[]
 
                         <button type="submit"  style="float:right"  class="btn btn-outline-primary mt-3">Assign Permission</button>
                     </form> 
-
                 </div>
             </div>
         </div>
