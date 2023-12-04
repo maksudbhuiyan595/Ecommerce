@@ -9,7 +9,7 @@
     </div>
 
     <div class="card-body">
-        <form action="{{ route('brand.store') }}" method="post">
+        <form action="{{ route('brand.store') }}" method="post" enctype="multipart/form-data">
             @csrf
 
             <div class="mb-3">
@@ -26,7 +26,7 @@
 
             <div>
                    <label for="">Upload Image</label>
-                   <input name="brand_image" type="file" class="form-control">
+                   <input name="image" type="file" class="form-control">
             </div>
 
             
